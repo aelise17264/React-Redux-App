@@ -5,7 +5,7 @@ import Brew from './Brew'
 function Breweries(props){
     return(
         <>
-        <h2>Find the Best Breweries to visit</h2>
+        <div className='card'>
         {
             props.brews.map((drink) => {
                 return <Brew
@@ -13,6 +13,7 @@ function Breweries(props){
                 drink={drink}/>
             })
         }
+        </div>
         </>
     )
 }
