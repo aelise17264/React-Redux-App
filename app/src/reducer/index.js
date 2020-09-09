@@ -5,7 +5,7 @@ import{
     } from '../components/actions'
 
 
-const initialState = {
+export const initialState = {
     brews: [],
     loadingFacts: false,
     errorMessage: ''

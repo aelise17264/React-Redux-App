@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import './App.css';
 import Breweries from './components/Breweries';
 import {connect} from 'react-redux';
-import {chaser} from './components/actions/Actions'
+import {chaser} from './components/actions'
 
 function App({chaser, loadingFacts, errorMessage}) {
   useEffect(() => {
