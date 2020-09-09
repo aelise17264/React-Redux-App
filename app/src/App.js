@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect} from 'react';
 import './App.css';
+import Breweries from './components/Breweries';
+import {connect} from 'react-redux';
+import {chaser} from './components/actions/Actions'
 
-function App() {
+function App({chaser, loadingFacts, errorMessage}) {
+  useEffect(() => {
+    chaser();
+  },[chaser])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h1>Best Breweries in America</h1>
+  {!loadingFacts ? <Breweries/> : <div>...Brewing up your request</div>}
+  {errorMessage !== "" ? <div>'{errorMessage}'</div> : null}
+
     </div>
   );
 }
 
-export default App;
+function mapStateToProps(state){
+  return{
+    loadingFacts: state.loadingFacts
+  }
+}
+
+export default connect(mapStateToProps, {chaser})(App);

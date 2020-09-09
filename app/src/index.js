@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-dom';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import {createStore, applyMiddleWare} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import reducer from './reducer'
 
-const store = createStore(reducer, applyMiddleWare(thunk, logger))
+const store = createStore(reducer, applyMiddleware(thunk, logger))
 
 ReactDOM.render(
   <React.StrictMode>
