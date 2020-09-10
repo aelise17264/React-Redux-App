@@ -1,0 +1,56 @@
+.App {
+  text-align: center;
+}
+
+body{
+  background-image: url(https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F191008155125-frontier-beer-1.jpg);
+}
+
+.card{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2%;
+ justify-content: space-evenly;
+  background: #faf3dd;
+  opacity: .75;
+  width: 85vw;
+  margin-left: 5%;
+
+}
+
+.cardMaker{
+  padding: 1% 5%;
+  
+}
+
+
+p{
+  font-size: .85rem;
+  font-weight: bold;
+  font-family: 'Merriweather', serif;
+}
+
+h2{
+  font-family: 'Lobster', cursive;
+
+}
+
+h2:hover{
+  color: #065446;
+  text-shadow: white 5px 5px
+}
+
+a{
+  font-size: .85rem;
+  font-weight: bold;
+  font-family: 'Merriweather', serif;
+
+}
+
+h1{
+  font-family: 'Crimson Text', serif;
+
+  text-shadow: 1px 1px 2px black, 0 0 1em white, 0 0 0.25em white;
+font-size: 5rem;
+color: #065446
+}
