@@ -2,7 +2,8 @@ import React, {useEffect} from 'react';
 import './App.css';
 import Breweries from './components/Breweries';
 import {connect} from 'react-redux';
-import {chaser} from './components/actions'
+import {chaser} from './components/actions';
+import BrewForm from './components/BrewForm'
 
 function App({chaser, loadingFacts, errorMessage}) {
   useEffect(() => {
@@ -12,9 +13,10 @@ function App({chaser, loadingFacts, errorMessage}) {
   return (
     <div className="App">
      <h1>Best Breweries in America</h1>
+     
   {!loadingFacts ? <Breweries/> : <div>...Brewing up your request</div>}
   {errorMessage !== "" ? <div>'{errorMessage}'</div> : null}
-
+  <BrewForm/>
     </div>
   );
 }
