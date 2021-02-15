@@ -54,3 +54,50 @@ h1{
 font-size: 5rem;
 color: #065446
 }
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 35vw;
+  margin-left: 30%;
+  background: #faf3dd;
+  align-items: right;
+  opacity: .75;
+
+  padding: 2%;
+}
+
+button{
+  background-color: #065446;
+  color: white;
+  font-size: 1.1rem;
+}
+
+input{
+
+ width: 20vw;
+ margin-left: 10px;
+ margin-right: 0;
+ border: none;
+ background: #faf3dd;
+}
+
+label{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1%;
+  border-bottom: solid black 2px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Merriweather', serif;
+  width: auto;
+}
+
+.coordinates input{
+  width: 12vw;
+  margin-left: 10px;
+  margin-right: 0;
+  border: none;
+  background: #faf3dd;
+}
